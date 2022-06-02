@@ -1,0 +1,7 @@
+<section>
+    <header>
+        {{post.title}} by {{post.user.username}} at {{format_date post.created_at}}
+    </header>
+   {{> comments post.comments}}
+
+</section>
