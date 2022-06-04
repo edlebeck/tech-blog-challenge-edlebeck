@@ -11,21 +11,19 @@
 
 <body>
   <header>
+    <nav>
+      <a href="/">Home</a>
+      {{#if loggedIn}}
+      <a href="/dashboard">Dashboard</a>
+      <button id="logout" class="btn-no-style">Logout</button>
+      {{else}}
+      <a href="/login">Login</a>
+      {{/if}}
+    </nav>
     <h1>The Tech Blog</h1>
   </header>
-  <nav>
-    <a href="/">Home</a>
-    <a href="/">Dashboard</a>
-    {{#if loggedIn}}
-    <button id="logout" class="btn-no-style">Logout</button>
-    {{else}}
-    <a href="/login">Login</a>
-    {{/if}}
-  </nav>
   <main>
-    <div>
-      {{{body}}}
-    </div>
+    {{{body}}}
   </main>
   {{#if loggedIn}}
   <script src="/js/logout.js"></script>
