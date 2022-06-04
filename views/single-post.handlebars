@@ -1,7 +1,23 @@
-<section>
-    <header>
-        {{post.title}} by {{post.user.username}} at {{format_date post.created_at}}
-    </header>
-   {{> comments post.comments}}
+<a href="/dashboard" class="go-back"> &larr; Back to dashboard</a>
+<br>
+<br>
 
-</section>
+{{> post-details post}}
+
+{{#if loggedIn}}
+<form class="comment-form">
+    <div>
+        <textarea name="comment-body"></textarea>
+    </div>
+
+    <div>
+        <button type="submit">add comment</button>
+    </div>
+</form>
+{{/if}}
+
+{{> comments post.comments}}
+
+{{#if loggedIn}}
+<script src="/js/add-comment.js"></script>
+{{/if}}
