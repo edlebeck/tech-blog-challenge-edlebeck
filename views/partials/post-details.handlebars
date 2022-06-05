@@ -1,7 +1,9 @@
-<section>
-  <a href="/post/{{id}}">
-    <header>{{title}}</header>
-  </a>
-  <p>Posted by {{user.username}} on {{format_date created_at}}</p>
-</section>
-<div>{{text}}</div>
+<div class="container border border-dark mt-2">
+  <section>
+    <a href="/post/{{id}}" class="d-flex justify-contents-center link-dark p-1 m-2 fs.2">
+      <h2>{{title}}</h2>
+    </a>
+    <p class="bg-dark text-secondary text-end">Posted by {{user.username}} on {{format_date created_at}}</p>
+  </section>
+  <div class="pb-4">{{text}}</div>
+</div>

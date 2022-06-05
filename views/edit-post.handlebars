@@ -1,26 +1,26 @@
-<article>
-    <section>
-        <div>
-            <h2>
-                Edit Post
-            </h2>
-        </div>
-        <div>
-            <form class="edit-post-form">
-                <div>
-                    <label>Title</label>
-                    <input type="text" name="post-title" id="post-title" value="{{post.title}}" />
-                </div>
-                <div class="post-content">
-                    <label for="post-content">Content</label>
-                    <textarea class="entry-field" id="post-content" name="post-content">{{post.content}}</textarea>
-                </div>
-                <button type="submit">Update post</button>
-                <button type="button" class="delete-post-btn">Delete post</button>
-            </form>
-        </div>
-    </section>
-</article>
+
+<section class="container">
+    <div>
+        <h2>
+            Edit Post
+        </h2>
+    </div>
+    <div>
+        <form class="edit-post-form">
+            <div>
+                <label>Title</label>
+                <input type="text" name="post-title" id="post-title" value="{{post.title}}" />
+            </div>
+            <div class="post-content">
+                <label for="post-content">Content</label>
+                <textarea class="entry-field" id="post-content" name="post-content">{{post.content}}</textarea>
+            </div>
+            <button type="submit" class="btn btn-dark">Update post</button>
+            <button type="button" class="btn btn-dark delete-post-btn">Delete post</button>
+        </form>
+    </div>
+</section>
+
 
 {{#if loggedIn}}
 <script src="/js/edit-post.js"></script>
