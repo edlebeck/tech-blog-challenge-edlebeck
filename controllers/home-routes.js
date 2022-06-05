@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { User, Post, Comment } = require('../models');
+const withAuth = require('../utils/auth');
 // : Import the custom middleware
 
 router.get('/', async (req, res) => {
@@ -48,7 +49,7 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
-router.get('/post/:id', (req, res) => {
+router.get('/post/:id', withAuth, (req, res) => {
   Post.findOne({
     where: {
       id: req.params.id
